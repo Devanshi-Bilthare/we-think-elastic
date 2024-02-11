@@ -30,6 +30,24 @@ body{
     background-color: #151414;
 }
 
+#cursor{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #151414;
+    position: fixed;
+    transform: scale(0);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cursor i{
+    font-size: 30px;
+    color: #fff;
+}
+
 #st_anime{
     width: 100%;
     height: 100vh;
@@ -161,14 +179,14 @@ nav button{
     color: #fff;
     margin-top: 10vh;
 }
-.content h4{
+#page4 h4,#page5 h4{
     font-size:16px;
     text-transform: uppercase;
     margin-top: 2%;
     font-weight: 900;
 }
 
-.content p{
+#page4 p,#page5 p{
     font-size:20px;
     /* text-transform: uppercase; */
 }
@@ -196,6 +214,10 @@ nav button{
 }
 
 .page4_video1 video:hover{
+    transform:scale(1.2);
+}
+
+.page4_video1 img:hover{
     transform:scale(1.2);
 }
 
@@ -231,3 +253,36 @@ nav button{
     transform:scale(1.2);
 }
 
+#page5{
+    width: 100%;
+    margin-top: 25vh;
+}
+
+.page5_video{
+    width: 60vw;
+    height: 100vh;
+    margin: auto;
+    transition: .5s linear all;
+    overflow: hidden;
+}
+
+.page5_video video{
+    width:60vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    transition: .5s linear all;
+}
+
+.page5_video:hover{
+    transform: scale(0.95);
+}
+
+.page5_video video:hover{
+    transform:scale(1.2);
+}
+
+#page5 h4,#page5 p{
+   margin-left:19vw ;
+    color: #fff;
+}

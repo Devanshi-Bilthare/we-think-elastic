@@ -120,3 +120,32 @@ function page3Animation(){
     })
 }
 page3Animation()
+
+
+function cursorEffect(){
+    var circle = document.querySelectorAll('.circle')
+document.addEventListener("mousemove",(e)=>{
+    gsap.to("#cursor",{
+        top: e.y,
+        left: e.x
+    })
+})
+    
+circle.forEach(circle => {
+    circle.addEventListener("mouseenter", () => {
+        gsap.to("#cursor", {
+           transform:"scale(1)",
+            duration: 0.3 
+        });
+    });
+
+    circle.addEventListener("mouseleave", () => {
+        gsap.to("#cursor", {
+            transform:"scale(0)",
+            duration: 0.3 
+        });
+    });
+});
+
+}
+cursorEffect()
