@@ -26,10 +26,14 @@ html,body{
 body{
     font-family: hell;
     color:#E7CFB1 ;
-    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    overflow-x: hidden !important;
     background-color: #151414;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
 #cursor{
     width: 80px;
     height: 80px;
@@ -65,7 +69,9 @@ body{
     display: none;
 }
 
-
+.hidden{
+    transform: translateY(-100%);
+}
 nav{
     width: 100%;
     /* height: 100px; */
@@ -75,6 +81,7 @@ nav{
     padding:1vw 2vw;
     position: fixed;
     z-index: -1;
+    background-color: #151414;
 }
 
 nav button{
@@ -99,8 +106,12 @@ nav button{
 .right_nav h4{
     font-size: 20px;
     font-weight: 100;
+    transition: .5s linear all;
+    cursor: pointer;
 }
-
+.right_nav h4:hover{
+    color: #F3C77C;
+}
 #page1{
     width: 100%;
     /* height: 100vh; */
@@ -152,6 +163,16 @@ nav button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+#page3 p{
+    position: absolute;
+    top: 74%;
+    left: 80%;
+    font-size: 19px;
+    text-transform: uppercase;
+
 }
 
 #page3 h2{
@@ -169,6 +190,32 @@ nav button{
 #page4{
     width: 100%;
     padding: 0% 2%;
+    position: relative;
+}
+
+#circular_text{
+    height: 200px;
+    font-size: 6px;
+    position: absolute;
+    font-size: 15px;
+    text-transform: uppercase;
+    left: 83%;
+    top: -5%;
+    animation : animate 10s linear infinite;
+    color: #E7CFB1;
+}
+
+@keyframes animate{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+#circular_text span{
+    position: absolute;
+    transform-origin: 0 90px;
 }
 
 .content{
@@ -326,12 +373,35 @@ nav button{
     align-items: center;
     background-color: #9AC1CB;
     padding-left:5vw;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 #page6 h1{
     font-size: 35vw;
     color: #151414;
+    position: relative;
+}
+
+#page6 img{
+    position: absolute;
+    width: 210px;
+}
+
+.page6_img1{
+    bottom: 7%;
+    left: 35%;
+    transform: rotate(8deg);
+}
+
+.page6_img2{
+    left: 92%;
+    top: 3%;
+}
+
+.page6_img3{
+    left: 150%;
+    top: 70%;
+    transform: rotate(8deg);
 }
 
 #page7{
@@ -360,5 +430,76 @@ nav button{
 }
 
 #page8{
-    
+    width: 100%;
+    min-height: max-content;
+    padding: 15vh 15vh;
+}
+
+.page8_content{
+    width: 100%;
+    padding: 10vh 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page9{
+    width:100%;
+    background-color: #E7CFB1;
+    padding: 18vh 0 ;
+}
+
+#page9 h2{
+    color: #151414;
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+}
+
+.page9_img{
+    width: 20vw;
+    height: 40vh;
+    background-color: red;
+    overflow: hidden;
+    margin:5vh auto;
+}
+
+.page9_img img{
+    width: 100%;
+    object-fit: cover;
+    transform: translatey(-40%);
+}
+#page10{
+    padding: 15vh 0 9vh 3vh ;
+}
+
+#page10 h2{
+    font-size: 6.7vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #695F53;
+}
+
+#page10 span{
+    color:#E7CFB1;
+    border-bottom: 4px solid #E7CFB1;
+    /* line-height: -10px; */
+}
+
+footer{
+    display: flex;
+    padding: 0 19vh 6vh 3vh;
+    justify-content: space-between;
+}
+
+footer p{
+    font-size: 12px;
+    color: #fff;
+    transition: .5s linear all;
+    cursor: pointer;
+}
+
+footer p:hover{
+    color: #F3C77C;
 }

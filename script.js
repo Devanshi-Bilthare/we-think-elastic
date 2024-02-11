@@ -163,6 +163,58 @@ function pinEffect(){
             pin:true
         }
     })
-}
 
+    gsap.to("#page6 img",{
+        transform: "translateX(-100vw)",
+        duration:3,
+        scrollTrigger:{
+            trigger:"#page6",
+            scroller:"body",
+            scrub:true,
+            start:"top 0",
+            end:"top -100%",
+            // pin:true
+        }
+    })
+}
 pinEffect()
+
+function page9Animation(){
+    gsap.from('#page9 h2',{
+        transform:"translateY(50%)",
+        opacity:0,
+        stagger:.5,
+        duration:1,
+        scrollTrigger:{
+            trigger:"#page9 h2",
+            scroller:"body",
+            // markers:true,
+            start:"top 90%"
+        }
+    })
+}
+page9Animation()
+
+function navAnimation(){
+    gsap.to("nav",{
+        y:-100,
+        duration:1,
+        scrollTrigger:{
+            trigger:"nav",
+            scroller:"body",
+            start:"top 0",
+            end:"top -10%",
+            scrub:true
+        }
+    })
+}
+navAnimation()
+
+const text = document.querySelector('#circular_text')
+text.innerHTML = text.textContent.replace(/\S/g,"<span>$&</span>")
+const spans = document.querySelectorAll('#circular_text span')
+spans.forEach((span, index) => {
+    span.style.transform = `rotate(${index * 10.5}deg)`;
+});
+
+
