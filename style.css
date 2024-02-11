@@ -26,7 +26,7 @@ html,body{
 body{
     font-family: hell;
     color:#E7CFB1 ;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: #151414;
 }
 
@@ -256,6 +256,7 @@ nav button{
 #page5{
     width: 100%;
     margin-top: 25vh;
+    position: relative;
 }
 
 .page5_video{
@@ -285,4 +286,79 @@ nav button{
 #page5 h4,#page5 p{
    margin-left:19vw ;
     color: #fff;
+}
+
+.discover{
+    width: 23vw;
+    height: 20vh;
+    border-radius: 50%;
+    border: 1px solid #E7CFB1;
+    margin: 15vh auto;
+    transition: .5s ease all;
+    background-color: transparent;
+    /* transform: rotate(-15deg); */
+}
+
+.discover:hover{
+    scale: 1.2;
+    transform: rotate(-15deg);
+}
+
+#page5 h2{
+    font-weight: 100;
+    font-size: 20px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#page5 h2:hover .discover{
+    scale: 1.2;
+    transform: rotate(-15deg);
+}
+
+#page6{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #9AC1CB;
+    padding-left:5vw;
+    overflow-x: hidden;
+}
+
+#page6 h1{
+    font-size: 35vw;
+    color: #151414;
+}
+
+#page7{
+    width: 100%;
+    height: 60vh;
+    background-color: #9AC1CB;
+    display: flex;
+    color: #151414;
+    justify-content: center;
+    gap: 15vw;
+    padding-top: 7vh;
+    /* align-items: center; */
+}
+
+#page7 h3{
+    font-size: 1.8vw;
+    text-transform: uppercase;
+    /* font-weight:400; */
+    margin-bottom: 1.5vh;
+}
+
+#page7 p{
+    font-size: 1.5vw;
+    margin-bottom: .6vh;
+    color:#403f3f;
+}
+
+#page8{
+    
 }

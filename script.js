@@ -149,3 +149,20 @@ circle.forEach(circle => {
 
 }
 cursorEffect()
+
+function pinEffect(){
+    gsap.to("#page6 h1",{
+        transform: "translateX(-50%)",
+        duration:3,
+        scrollTrigger:{
+            trigger:"#page6",
+            scroller:"body",
+            scrub:true,
+            start:"top 0",
+            end:"top -100%",
+            pin:true
+        }
+    })
+}
+
+pinEffect()
