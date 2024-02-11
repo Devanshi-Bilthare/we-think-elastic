@@ -27,6 +27,7 @@ body{
     font-family: hell;
     color:#E7CFB1 ;
     overflow: hidden;
+    background-color: #151414;
 }
 
 #st_anime{
@@ -84,7 +85,7 @@ nav button{
 
 #page1{
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: #151414;
     transform: translateY(100%);
     display: flex;
@@ -127,7 +128,7 @@ nav button{
 
 #page3{
     width: 100%;
-    background-color: black;
+    background-color: #151414;
     padding:12%;
     display: flex;
     flex-direction: column;
@@ -146,3 +147,87 @@ nav button{
     font-weight: 100;
     letter-spacing: -15px;
 }
+
+#page4{
+    width: 100%;
+    padding: 0% 2%;
+}
+
+.content{
+    width: 100%;
+    height:110vh;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 10vh;
+}
+.content h4{
+    font-size:16px;
+    text-transform: uppercase;
+    margin-top: 2%;
+    font-weight: 900;
+}
+
+.content p{
+    font-size:20px;
+    /* text-transform: uppercase; */
+}
+.content1{
+    width: 45vw;
+    height: 85vh;
+}
+
+.page4_video1{
+    width: 100%;
+    height: 72vh;
+    overflow:hidden;
+    transition: .5s linear all;
+}
+
+.page4_video1:hover{
+   transform: scale(0.95);
+}
+
+.page4_video1 video,.page4_video1 img{
+    width: 45vw;
+    height:72vh ;
+    object-fit: cover;
+    transition: .5s linear all;
+}
+
+.page4_video1 video:hover{
+    transform:scale(1.2);
+}
+
+.content2{
+    width: 30vw;
+    height: 110vh;
+}
+
+.extra{
+    width: 100%;
+    height: 45%;
+}
+
+.page4_img1{
+    width: 100%;
+    height: 53vh;
+    overflow: hidden;
+    transition: .5s linear all;
+}
+
+.page4_img1 img{
+    width: 30vw;
+    height: 53vh;
+    object-fit: cover;
+    transition: .5s linear all;
+}
+
+.page4_img1:hover{
+    transform: scale(0.95);
+ }
+ 
+ .page4_img1 img:hover{
+    transform:scale(1.2);
+}
+
